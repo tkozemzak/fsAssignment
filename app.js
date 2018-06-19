@@ -54,13 +54,21 @@ console.log(challengeFiveText);
 var challengeSix = fs.readdirSync('./challenge6')
 challengeSix = challengeSixFunc(challengeSix)
 
-function challengeSixFunc(array){
-  let newArr = []
-for(let i=0; i<array.length; i++){
-  if(array[i].includes('txt')){
-    newArr.push(array[i])
-  }
+
+
+function challengeSixFunc(arr){
+  return console.log(arr.filter(item => item.includes('txt')
+))
+
 }
-console.log(newArr);
-  return newArr
-}
+
+// function challengeSixFunc(array){
+//   let newArr = []
+// for(let i=0; i<array.length; i++){
+//   if(array[i].includes('txt')){
+//     newArr.push(array[i])
+//   }
+// }
+// console.log(newArr);
+//   return newArr
+// }
