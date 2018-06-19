@@ -37,15 +37,21 @@ var challengeFiveText = fs.readFileSync('./challenge5/info.txt', 'utf-8')
 
 challengeFiveText = challengeFive(challengeFiveText)
 
-function challengeFive(str) {
-  let newStr = str.split('');
-  for (let i = 0; i < str.length; i++) {
-    if (newStr[i] === '-') {
-      newStr[i] = ' '
-    }
-  }
-  return newStr.join('')
+function challengeFive(str){
+    let newStr = str.replace(/-/gi,' ').replace(/troy/gi, 'Tim')
+return newStr
 }
+
+
+// function challengeFive(str) {
+//   let newStr = str.split('');
+//   for (let i = 0; i < str.length; i++) {
+//     if (newStr[i] === '-') {
+//       newStr[i] = ' '
+//     }
+//   }
+//   return newStr.join('')
+// }
 console.log(challengeFiveText);
 
 
